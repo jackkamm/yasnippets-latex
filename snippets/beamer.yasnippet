@@ -6,7 +6,7 @@
 # --
 \documentclass[xcolor=dvipsnames]{beamer}
 
-\usepackage{graphicx,subfigure,url}
+\usepackage{graphicx,subcaption,url}
 
 % example themes
 \usetheme{Frankfurt}
@@ -17,6 +17,16 @@
 % \setbeamertemplate{footline}[frame number]{}
 % remove navigation symbols
 % \setbeamertemplate{navigation symbols}{}
+
+\AtBeginSection[]
+{
+  \begin{frame}
+    \frametitle{Table of Contents}
+    \tableofcontents[currentsection]
+  \end{frame}
+}
+
+
 
 \title{${1:Presentation Title}}
 \author{${2:Author Name}}
