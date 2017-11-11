@@ -2,7 +2,6 @@
 # contributor : Mads D. Kristensen <madsdk@gmail.com>
 # key : graphics
 # name : \includegraphics
-# modified by Jack Kamm to use helm, following:
-# https://emacs.stackexchange.com/questions/21288/find-files-interactively-with-a-snippet
+# modified by Jack Kamm to use helm/ivy filename completion
 # --
-\includegraphics[width=${1:.75}\linewidth]{${2:$$(unless yas-modified-p (completing-read "File: " 'read-file-name-internal))}}
+\includegraphics[width=${1:.75}\linewidth]{${2:$$(unless yas-modified-p (file-relative-name (read-file-name "File: ")))}}
